@@ -23,7 +23,7 @@ public final class AsyncPrimeClient {
 		while(true)
 		{	
 			waitASecond();
-			if(!hasStopped())
+			if(thread.isAlive())
 				System.out.print(".");
 			else
 				break;
@@ -50,11 +50,6 @@ public final class AsyncPrimeClient {
 		thread = new BlockingThread();
 		thread.setEndpoint(p_endpoint);
 		thread.start();
-	}
-	
-	private boolean hasStopped()
-	{
-		return thread.getState() == Thread.State.TERMINATED;
 	}
 
 	public static void main(String[] args)

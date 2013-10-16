@@ -9,7 +9,7 @@ public final class ThreadPooledPrimeServer {
 	private ExecutorService executor;
 	private final ServerEndpoint endpoint;
 	
-	private static final int MAX_THREADS = 1;
+	private static final int MAX_THREADS = 2;
 	
 	public ThreadPooledPrimeServer()
 	{
