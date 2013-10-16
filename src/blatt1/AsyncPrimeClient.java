@@ -57,7 +57,8 @@ public final class AsyncPrimeClient {
 		return thread.getState() == Thread.State.TERMINATED;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		for (long i = 1000000000000000000L; i < 1000000000000000010L; i++) {
 			new AsyncPrimeClient(i).run();
 		}
